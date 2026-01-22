@@ -35,6 +35,8 @@ class PackageQueue {
                 kolejka_.pop_front();
                 return buf;
             }
+            Package buf = kolejka_.back();
+            return buf;
         }
         void push(Package pacz)
         {
