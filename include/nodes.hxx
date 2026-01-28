@@ -211,7 +211,7 @@ class Ramp : public PackageSender {
 
 class Storehouse : public IPackageReceiver {
     public:
-        Storehouse(ElementID id, std::unique_ptr<PackageQueue> d) : id_(id), d_(std::move(d)) {}
+        Storehouse(ElementID id, std::unique_ptr<PackageQueue> d = std::make_unique<PackageQueue>(PackageQueueType::FIFO)) : id_(id), d_(std::move(d)) {}
         ElementID get_id() const override {return id_;}
         ReceiverType get_typp() override
         {
