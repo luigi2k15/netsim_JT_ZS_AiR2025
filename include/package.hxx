@@ -1,7 +1,11 @@
 #ifndef package
 #define package
 #include "types.hxx"
-#include<bits/stdc++.h>
+#include <set>
+#include <list>
+#include <map>
+#include <algorithm>
+//#include<bits/stdc++.h>
 
 class Package {
     public:
