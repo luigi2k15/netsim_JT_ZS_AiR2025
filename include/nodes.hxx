@@ -167,6 +167,10 @@ class Worker : public IPackageReceiver, PackageSender {
         {
             return q_->cbegin();
         }
+        IPackageQueue* get_queue() const
+        {
+            return q_.get();
+        }
 
         Worker(const Worker&) = delete;
         Worker& operator=(const Worker&) = delete;
